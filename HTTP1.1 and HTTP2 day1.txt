@@ -1,0 +1,25 @@
+Difference between HTTP1.1 and HTTP2:
+
+HTTP1.1:
+
+1.Multiplexing : Only allows one request per connection at a time. If a browser wants to retrieve multiple resources, it must open multiple connections, leading to increased overhead.
+
+2.Header Compression : Headers are sent as plain text with each request and response, resulting in redundant data transmission.
+3.Binary Protocol : Uses a text-based protocol, which can be inefficient to parse and process.
+
+4. Server Push : Does not support server push. All resources must be explicitly requested by the client.
+
+5.Stream Prioritization : Does not support stream prioritization. All requests are treated equally, regardless of their importance.
+
+HTTP2:
+
+1.Multiplexing : Introduces multiplexing, enabling multiple requests and responses to be interleaved over a single connection. This significantly reduces latency and improves overall performance, as resources can be fetched in parallel.
+ 
+2.Header Compression : Implements header compression, reducing overhead by compressing header data before transmission. This results in faster data transfer and reduced network latency.
+
+3.Binary Protocol : Utilizes a binary protocol, which is more efficient for both servers and clients to parse and process, leading to faster communication between them.
+
+4.Server Push : Introduces server push, allowing servers to proactively send resources to the client's cache before they are requested. This can significantly reduce page load times by preemptively sending necessary resources.
+
+5.Stream Prioritization : Introduces stream prioritization, allowing clients to assign priority levels to different resources. This enables more efficient resource allocation, ensuring that critical resources are fetched and rendered first.
+
